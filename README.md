@@ -1,4 +1,4 @@
 CurveClock
 ==========
 
-3D printer Clock with various curves and tesselation faces
+3D printed clock with various curves and tesselation faces
