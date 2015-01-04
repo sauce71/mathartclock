@@ -1,4 +1,4 @@
-CurveClock
+Math Art Clock
 ==========
 
-3D printed clock with various curves and tesselation faces
+3D printed clock with various math art faces
