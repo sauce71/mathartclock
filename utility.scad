@@ -21,6 +21,7 @@ function xF(v) = v - [F,0,0];
 function yF(v) = v - [0,F,0];
 function zF(v) = v - [0,0,F];
 
+
 // Vector Readability
 function vX(v) = v[0];
 function vY(v) = v[1];
@@ -68,6 +69,7 @@ module cube_centered(v,z=0,fillet_r=0) {
 		}
 		}
 }
+
 
 
 module teardrop(h, r, center=true, cut=true, $fn=20)
@@ -122,6 +124,21 @@ module bezier3(p0,p1,p2,steps=5, above=false) {
 	}
 }
 
+// Lag Bezier med startpunkt, sluttpunkt, start_tangent, end_tangent
+
+// Punkt på tangent for sirkel hvor grader er
+// circle_tan(r,a) = [tan(), tan()]
+
+
+module bezier3_3d(xy0,xy1,xy2, xz0,xz1,xz2, steps=5,above=false) {
+// For hvert step kalkuler Bezier xz i tillegg, beskriver høyde
+//A Primer on Bézier Curves
+//http://pomax.github.io/bezierinfo/
+
+
+
+}
+
 	
 // Angle between 2 points
 function a2p(p1,p2) = atan2(p2[1]-p1[1],p2[0]-p1[0]);
@@ -154,7 +171,7 @@ p = [[0,18], [12,6], [20,8]];
 for(i=p) 
 	%translate([i[0], i[1],0]) cylinder(r=1, h=3, $fn=10);
 linear_extrude(height=2)
-bezier3(p0=p[0], p1=p[1], p2=p[2], weight=2, steps=20, above=true);
+bezier3(p0=p[0], p1=p[1], p2=p[2], weight=2, steps=20, above=false);
 
 
 
