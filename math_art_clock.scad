@@ -25,13 +25,13 @@ layer  = 0.3; // Layerheight
 solid_layers = 3;
 nozzle = 0.4;
 // Perimeters - slic3r tend to change this around between versions
-e_perimeters_ew = 0.5; // External perimeters
+e_perimeters_ew = 0.4; // External perimeters
 //perimeter_ew = 0.67;    	// lh=0.2
-perimeters_ew = 0.5; 		// lh=0.3
+perimeters_ew = 0.4; 		// lh=0.3
 /*
-Going for "2" perimeters width. 
+Going for "3" perimeters width. 
 */
-wall = 2*e_perimeters_ew;
+wall = 3*e_perimeters_ew;
 rim = wall*4; // Edge of clock
 
 mech = [56,56,17]; // Size of mechanism
